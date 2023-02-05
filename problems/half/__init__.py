@@ -3,13 +3,13 @@ import check50.c
 
 @check50.check()
 def exists():
-    """piglatin.c exists"""
-    check50.exists("piglatin.c")
+    """half.c exists"""
+    check50.exists("half.c")
 
 @check50.check(exists)
 def compiles():
-    """piglatin.c compiles"""
-    check50.c.compile("piglatin.c", lcs50=True)
+    """half.c compiles"""
+    check50.c.compile("half.c", lcs50=True)
 
 @check50.check(compiles)
 def emma():
