@@ -18,5 +18,5 @@ def veronica():
 
 @check50.check(compiles)
 def brian():
-    """responds to name Brian."""
+    """responds to name David."""
     check50.run("./hello").stdin("David").stdout("David").exit()
