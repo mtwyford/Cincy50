@@ -1,6 +1,6 @@
 check50:
   checks:
-    apple: # pass 'apple' to pic latin and expect back 'appleyay'
+    apple: # pass 'apple' to pig latin and expect back 'appleyay'
       - run: c99 pig.c
         stdin: apple
         stdout: appleyay
