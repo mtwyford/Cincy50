@@ -47,4 +47,3 @@ def regex(input):
 
 def check_half(bill: str, tax: str, tip: str, expected: str):
     check50.run("./half").stdin(bill).stdin(tax).stdin(tip).stdout(regex(expected), expected, regex=True)
-    
