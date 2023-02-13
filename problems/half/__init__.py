@@ -58,3 +58,4 @@ def check_half(bill: str, tax: str, tip: str, expected: str):
 def compiles():
     """half.c compiles"""
     check50.c.compile("half.c", lcs50=True)
+    
