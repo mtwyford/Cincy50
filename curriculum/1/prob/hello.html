@@ -18,15 +18,15 @@
     <a class="w3-bar-item w3-button" href="#logging-in"> Logging In</a>
     <a class="w3-bar-item w3-button" href="#updating"> Updating</a>
     <a class="w3-bar-item w3-button" href="#navigating-cs50-ide"> Navigating CS50 IDE</a>
-    <a class="w3-bar-item w3-button" href="#specification"> Specification<\a>
-    <a class="w3-bar-item w3-button" href="#walkthrough"> Walkthrough<\a>
-	<a class="w3-bar-item w3-button" href="#usage"> Usage<\a>
+    <a class="w3-bar-item w3-button" href="#specification"> Specification</a>
+    <a class="w3-bar-item w3-button" href="#walkthrough"> Walkthrough</a>
+	<a class="w3-bar-item w3-button" href="#usage"> Usage</a>
 	<a class="w3-bar-item w3-button" href="#testing"> Testing</a>
     <a class="w3-bar-item w3-button" href="#correctness"> Correctness</a>
-    <a class="w3-bar-item w3-button" href="#staff-solution"> Staff Solution<\a>
+    <a class="w3-bar-item w3-button" href="#staff-solution"> Staff Solution</a>
 	<a class="w3-bar-item w3-button" href="#how-to-submit"> How to Submit</a>
-    <a class="w3-bar-item w3-button" href="#step-1-of-3"> Step 1 of 3<\a>
-	<a class="w3-bar-item w3-button" href="#step-2-of-3"> Step 2 of 3<\a>
+    <a class="w3-bar-item w3-button" href="#step-1-of-3"> Step 1 of 3</a>
+	<a class="w3-bar-item w3-button" href="#step-2-of-3"> Step 2 of 3</a>
 	<a class="w3-bar-item w3-button" href="#step-3-of-3"> Step 3 of 3</a>
     <a href="#hints">Hints</a>
 </div>
@@ -146,106 +146,15 @@
     </div>
     <div class="paragraph">
     <p>Now - let's create a file in the new folder, week1 so we can write code in the file. Type <code>code hello.c</code> next to the prompt.  Hit Enter.  Now - you should see a new tab appear at the top 'edit' window and - if you move your mose and click on the 'week1' folder in the top left a new file, 'hello.c' should appear.  In the command prompt or terminal, type <code>ls</code>.  Notice that the terminal should look similar to the picture below (I'm using a dark mode theme) <br/>
-	    <img src="hello.png"></p>
-    </div>
-    <div class="paragraph">
-    <p><code>Untitled</code> isn&#8217;t exactly a useful name for this file though, is it? Let&#8217;s fix that! In the file tree on the left, right-click on <code>Untitled</code> and select <strong>Rename</strong> from the context menu. Enter <code>hello.txt</code> when able, and then hit Enter on your keyboard. You should see the name of the file has changed both in the file tree on the left and in the name of the tab.</p>
-    </div>
-    <div class="paragraph">
-    <p>Okay, with <code>hello.txt</code> still open in your workspace, notice that beneath your document is that terminal window. Notice that the window&#8217;s prompt is, assuming you haven&#8217;t otherwise manipulated it</p>
-    </div>
-    <div class="listingblock">
-    <div class="content">
-    <pre class="pygments highlight"><code><span></span>~/ $</code></pre>
-    </div>
-    </div>
-    <div class="paragraph">
-    <p>(where <code>~/</code>—i.e., your home directory—is the directory you are currently in.) If that&#8217;s the case, based on the file tree should be both a <code>chapter1</code> and a <code>hello</code> directory somewhere inside, since we created them just a few moments ago. Let&#8217;s confirm as much.</p>
-    </div>
-    <div class="paragraph">
-    <p>Click somewhere inside of that terminal window and type</p>
-    </div>
-    <div class="listingblock">
-    <div class="content">
-    <pre class="pygments highlight"><code><span></span>ls</code></pre>
-    </div>
-    </div>
-    <div class="paragraph">
-    <p>and then Enter. That&#8217;s a lowercase <code>L</code> and a lowercase <code>S</code>, which is shorthand notation for "list." Indeed, you should then see a list of the folders inside of your home directory, among which is <code>chapter1</code>! Let&#8217;s open that folder! Type</p>
-    </div>
-    <div class="listingblock">
-    <div class="content">
-    <pre class="pygments highlight"><code><span></span>cd chapter1</code></pre>
-    </div>
-    </div>
-    <div class="paragraph">
-    <p>or even</p>
-    </div>
-    <div class="listingblock">
-    <div class="content">
-    <pre class="pygments highlight"><code><span></span>cd ~/chapter1/</code></pre>
-    </div>
-    </div>
-    <div class="paragraph">
-    <p>followed by Enter to <span class="underline">c</span>hange your <span class="underline">d</span>irectory to <code>~/chapter1/</code> (ergo, <code>cd</code>). You should find that your prompt changes to</p>
-    </div>
-    <div class="listingblock">
-    <div class="content">
-    <pre class="pygments highlight"><code><span></span>~/chapter1/ $</code></pre>
-    </div>
-    </div>
-    <div class="paragraph">
-    <p>confirming that you are indeed now inside of <code>~/chapter1/</code> (i.e., a directory called <code>chapter1</code> inside of your home directory). Then type</p>
-    </div>
-    <div class="listingblock">
-    <div class="content">
-    <pre class="pygments highlight"><code><span></span>cd hello</code></pre>
-    </div>
-    </div>
-    <div class="paragraph">
-    <p>followed by Enter to enter into our directory <code>hello</code>. Now type</p>
-    </div>
-    <div class="listingblock">
-    <div class="content">
-    <pre class="pygments highlight"><code><span></span>ls</code></pre>
-    </div>
-    </div>
-    <div class="paragraph">
-    <p>followed by Enter. You should see <code>hello.txt</code>! Now, you can&#8217;t click or double-click on that file&#8217;s name there; it&#8217;s just text. But that listing does confirm that <code>hello.txt</code> is where we hoped it would be.</p>
-    </div>
-    <div class="paragraph">
-    <p>Let&#8217;s poke around a bit more. Go ahead and type</p>
-    </div>
-    <div class="listingblock">
-    <div class="content">
-    <pre class="pygments highlight"><code><span></span>cd</code></pre>
-    </div>
-    </div>
-    <div class="paragraph">
-    <p>and then Enter. It turns out that if you don&#8217;t provide <code>cd</code> with a "command-line argument" (i.e., a directory&#8217;s name), it whisks you back to the <code>~/</code> directory by default.</p>
-    </div>
-    <div class="paragraph">
-    <p>And indeed, your prompt should now be:</p>
-    </div>
-    <div class="listingblock">
-    <div class="content">
-    <pre class="pygments highlight"><code><span></span>~/ $</code></pre>
-    </div>
-    </div>
-    <div class="paragraph">
-    <p>Phew, home sweet home. Remember that everything we create in the CS50 IDE will ultimately live inside of <code>~/</code>.</p>
-    </div>
-    <div class="paragraph">
-    <p>Make sense? If not, no worries; it soon will! It&#8217;s in this terminal window that you&#8217;ll soon be compiling your first program! For now, though, close the tab by clicking the small "x" in the tab for <code>hello.txt</code> (if you&#8217;ve made additional changes, you&#8217;ll be asked if you want to save your file before the tab closes).</p>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="sect1">
+	<img src="hello.png"></p>
+	<p>Okay, on the top pane or window, you should see the tab labelled <code>hello.c</code> Let's write some code!</p>
+    </div>div>   
+    
+		<div class="sect1">
     <h2 id="specification"><a class="link" href="#specification">Specification</a></h2>
     <div class="sectionbody">
     <div class="paragraph">
-    <p>Shall we have you write your first program? Inside of your <strong>hello</strong> folder, create a new file called <strong>hello.c</strong>, and then open that file in a tab. (Remember how?) Be sure to name the file just as we have, in all lowercase; files' and folders' names in Linux are "case-sensitive." Proceed to write your first program by typing precisely these lines into the file:</p>
+    <p>So - let's write your first program? Inside of your <strong>week1</strong> folder, we created a new file called <strong>hello.c</strong>, and then opened that file in a tab. (Remember how?) Be sure to name the file just as we have, in all lowercase; files' and folders' names in Linux are "case-sensitive." Proceed to write your first program by typing precisely these lines into the file:</p>
     </div>
     <div class="listingblock">
     <div class="content">
@@ -258,17 +167,17 @@
     </div>
     </div>
     <div class="paragraph">
-    <p>Notice how CS50 IDE adds "syntax highlighting" (i.e., color) as you type, though CS50 IDE&#8217;s choice of colors might differ from this problem set&#8217;s. Those colors aren&#8217;t actually saved inside of the file itself; they&#8217;re just added by CS50 IDE to make certain syntax stand out. Had you not saved the file as <code>hello.c</code> from the start, CS50 IDE wouldn&#8217;t know (per the filename&#8217;s extension) that you&#8217;re writing C code, in which case those colors would be absent.</p>
+    <p>Notice how the IDE adds "syntax highlighting" (i.e., color) as you type, though the different theme colors might differ from this problem set&#8217;s. Those colors aren&#8217;t actually saved inside of the file itself; they&#8217;re just added by CS50 IDE to make certain syntax stand out. Had you not saved the file as <code>hello.c</code> from the start, CS50 IDE wouldn&#8217;t know (per the filename&#8217;s extension) that you&#8217;re writing C code, in which case those colors would be absent.</p>
     </div>
     <div class="paragraph">
     <p>Do be sure that you type this program just right, else you&#8217;re about to experience your first bug! In particular, capitalization matters, so don&#8217;t accidentally capitalize words (unless they&#8217;re between those two quotes). And don&#8217;t overlook that one semicolon. C is quite nitpicky!</p>
     </div>
     <div class="paragraph">
-    <p>When done typing, select <strong>File &gt; Save</strong> (or hit command- or control-s), but don&#8217;t quit. Recall that the red dot atop the tab should then disappear. Click anywhere in the terminal window beneath your code, and be sure that you&#8217;re inside of <code>~/chapter1/hello</code>. (Remember how? If not, type <code>cd</code> and then Enter, followed by <code>cd chapter1/hello/</code> and then Enter.) Your prompt should be:</p>
+    <p>When done typing, the file should auto save - but you can choose <ctrl> + s, or <Command> + s on a MAC, but don&#8217;t quit. Recall that the white dot atop the tab should then disappear. Click anywhere in the terminal window beneath your code, and be sure that you&#8217;re inside of <code>~/week1</code>. (Remember how? If not, type <code>cd</code> and then Enter, followed by <code>cd week1</code> and then Enter.) Your prompt should be:</p>
     </div>
     <div class="listingblock">
     <div class="content">
-    <pre class="pygments highlight"><code data-lang="text"><span></span>~/chapter1/hello/ $</code></pre>
+    <pre class="pygments highlight"><code data-lang="text"><span></span>week1/ $</code></pre>
     </div>
     </div>
     <div class="paragraph">
