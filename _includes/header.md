@@ -1,5 +1,4 @@
-# [SHS CS50 AP]({{ "/" | relative_url }})
+# [CS50 AP]({{ "/" | relative_url }})
 
-Seven Hills School\\
-Twyford\\
-2022-2023\\
+Harvard University\\
+2019–2020
