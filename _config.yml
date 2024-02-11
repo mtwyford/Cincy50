@@ -3,9 +3,7 @@ permalink: pretty
 plugins:
   - jekyll-remote-theme
 
-remote_theme: cs50/jekyll-theme-cs50
-
-title: CS50 AP
+title: Cincy50 AP
 
 remote_theme: pages-themes/leap-day@v0.2.0
 plugins:
