@@ -1,3 +1,5 @@
+* [Return](https://mtwyford.github.io/Cincy50/Curriculum/)
+
 # Chapter 1
 
 * [Video](https://video.cs50.net/2018/fall/lectures/1)
