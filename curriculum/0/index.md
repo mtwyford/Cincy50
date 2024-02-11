@@ -1,4 +1,4 @@
-* [Return Home](https://mtwyford.github.io/Cincy50/)
+* [Return](https://mtwyford.github.io/Cincy50/Curriculum/)
 
 # Chapter 0
 
