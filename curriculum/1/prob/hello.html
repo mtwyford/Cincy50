@@ -1,179 +1,576 @@
+
 <!DOCTYPE html>
 <html>
-        <head>
-                <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-                <title>Problem: Hello</title>
-        </head>
-<body>
-        <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%; margin-left:2%;">
-                <h3 class="w3-bar-item">Table of Contents</h3>
-                        <a class="w3-bar-item w3-button" href="#tldr">tl;dr</a>
-                        <a class="w3-bar-item w3-button" href="#academic-honesty"> Academic Honesty</a>
-                        <a class="w3-bar-item w3-button" href="#reasonable"> Reasonable</a>
-                        <a class="w3-bar-item w3-button" href="#not-reasonable"> Not Reasonable</a>
-                        <a class="w3-bar-item w3-button" href="#getting-started"> Getting Started</a>
-                        <a class="w3-bar-item w3-button" href="#logging-in"> Logging In</a>
-                        <a class="w3-bar-item w3-button" href="#updating"> Updating</a>
-                        <a class="w3-bar-item w3-button" href="#navigating-cs50-ide"> Navigating CS50 IDE</a>
-                        <a class="w3-bar-item w3-button" href="#specification"> Specification<\a>
-                        <a class="w3-bar-item w3-button" href="#walkthrough"> Walkthrough<\a>
-                        <a class="w3-bar-item w3-button" href="#usage"> Usage<\a>
-                        <a class="w3-bar-item w3-button" href="#testing"> Testing</a>
-                        <a class="w3-bar-item w3-button" href="#correctness"> Correctness</a>
-                        <a class="w3-bar-item w3-button" href="#staff-solution"> Staff Solution<\a>
-                        <a class="w3-bar-item w3-button" href="#how-to-submit"> How to Submit</a>
-                        <a class="w3-bar-item w3-button" href="#step-1-of-3"> Step 1 of 3<\a>
-                        <a class="w3-bar-item w3-button" href="#step-2-of-3"> Step 2 of 3<\a>
-                        <a class="w3-bar-item w3-button" href="#step-3-of-3"> Step 3 of 3</a>
-                        <a href="#hints">Hints</a>
-                </div>
-                
-                <div style="margin-left:32%">
-  
-         <h1>Problem: Hello</h1>
-  <p>Don't be alarmed by the length of this problem's specification. Most of it is just instructions for getting your programming environment set up and learning how to navigate within it. Once these steps are completed, you'll be good to go for the rest of the year in CS50 AP!</p>
- <h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
-  <p>Implement a program that prints out a simple greeting to the user, per the below.</p>
-  <p>$ ./hello hello, world</p>
-  <h2><a href="#academic-honesty">Academic Honesty</a></h2>
-  <p>This course's philosophy on academic honesty is best stated as "be reasonable." The course recognizes that interactions with classmates and others can facilitate mastery of the course's material. However, there remains a line between enlisting the help of another and submitting the work of another. This policy characterizes both sides of that line.</p>
-  <p>The essence of all work that you submit to this course must be your own. Collaboration on problems is not permitted (unless explicitly stated otherwise) except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. Generally speaking, when asking for help, you may show your code or writing to others, but you may not view theirs, so long as you and they respect this policy's other constraints. Collaboration on quizzes and tests is not permitted at all. Collaboration on the final project is permitted to the extent prescribed by its specification.</p>
-  <p>Below are rules of thumb that (inexhaustively) characterize acts that the course considers reasonable and not reasonable. If in doubt as to whether some act is reasonable, do not commit it until you solicit and receive approval in writing from your instructor. If a violation of this policy is suspected and confirmed, your instructor reserves the right to impose local sanctions on top of any disciplinary outcome that may include an unsatisfactory or failing grade for work submitted or for the course itself.</p>
-  <h3 id="reasonable"><a href="#reasonable">Reasonable</a></h3>
-  <ul>
-    <li>Communicating with classmates about problems in English (or some other spoken language).</li>
-    <li>Discussing the course's material with others in order to understand it better.</li>
-    <li>Helping a classmate identify a bug in his or her code, such as by viewing, compiling, or running his or her code, even on your own computer.</li>
-    <li>Incorporating snippets of code that you find online or elsewhere into your own code, provided that those snippets are not themselves solutions to assigned problems and that you cite the snippets' origins.</li>
-    <li>Reviewing past years' quizzes, tests, and solutions thereto.</li>
-    <li>Sending or showing code that you've written to someone, possibly a classmate, so that he or she might help you identify and fix a bug.</li>
-    <li>Sharing snippets of your own solutions to problems online so that others might help you identify and fix a bug or other issue.</li>
-    <li>Turning to the web or elsewhere for instruction beyond the course's own, for references, and for solutions to technical difficulties, but not for outright solutions to problems or your own final project.</li>
-    <li>Whiteboarding solutions to problems with others using diagrams or pseudocode but not actual code.</li>
-    <li>Working with (and even paying) a tutor to help you with the course, provided the tutor does not do your work for you.</li>
-  </ul>
-  <h3><a href="#not-reasonable">Not Reasonable</a></h3>
-  <ul>
-    <li>Accessing a solution to some problem prior to (re-)submitting your own.</li>
-    <li>Asking a classmate to see his or her solution to a problem before (re-)submitting your own.</li>
-    <li>Decompiling, deobfuscating, or disassembling the staff's solutions to problems.</li>
-    <li>Failing to cite (as with comments) the origins of code, writing, or techniques that you discover outside of the course's own lessons and integrate into your own work, even while respecting this policy's other constraints.</li>
-    <li>Giving or showing to a classmate a solution to a problem when it is he or she, and not you, who is struggling to solve it.</li>
-    <li>Looking at another individual's work during a quiz or test.</li>
-    <li>Paying or offering to pay an individual for work that you may submit as (part of) your own.</li>
-    <li>Providing or making available solutions to problems to individuals who might take this course in the future.</li>
-    <li>Searching for, soliciting, or viewing a quiz's questions or answers prior to taking the quiz.</li>
-    <li>Searching for or soliciting outright solutions to problems online or elsewhere.</li>
-    <li>Splitting a problem's workload with another individual and combining your work (unless explicitly authorized by the problem itself).</li>
-    <li>Submitting (after possibly modifying) the work of another individual beyond allowed snippets.</li>
-    <li>Submitting the same or similar work to this course that you have submitted or will submit to another.</li>
-    <li>Using resources during a quiz beyond those explicitly allowed in the quiz's instructions.</li>
-    <li>Viewing another's solution to a problem and basing your own solution on it.</li>
-  </ul>
-  <h2><a href="#getting-started">Getting Started</a></h2>
-  <p>Recall that CS50 IDE is a web-based "integrated development environment" that allows you to program "in the cloud," without installing any software locally. Underneath the hood is a popular operating system, Ubuntu Linux, that’s been "containerized" with open-source software called Docker, that allows multiple users (like you!) to share the operating system’s "kernel" (its nucleus, so to speak) and files, even while having files of their own. Indeed, CS50 IDE provides you with your very own "workspace" (i.e., storage space) in which you can save your own files and folders (aka directories).</p>
-  <p>After all, wouldn't you like to get programming right away, without having to download, install, or configure much of anything at all?</p>
-  <h3><a href="#logging-in">Logging In</a></h3>
-  <p>Head to <a href="https://ide.cs50.io/">ide.cs50.io</a> and log into CS50 IDE. You may be prompted (again) for your email address. If so, after providing it, click <strong>Private</strong> under <strong>Hosted workspace</strong>, then choose <strong>Harvard's CS50</strong> under <strong>Choose a template</strong>, and click <strong>Create workspace</strong>.</p>
-  <p>You should then be informed that CS50 IDE (aka Cloud9, the software that underlies CS50 IDE) is "creating your workspace" and "creating your container," which might take a moment. You should eventually see your workspace, which should resemble David's from Week 1. If not, do just email the course's heads to inquire!</p>
-  <h3><a href="#updating">Updating</a></h3>
-  <p>Toward the bottom of CS50 IDE's UI is a "terminal window" (light blue, by default), a command-line interface (CLI) that allows you to explore your workspace's files and directories, compile code, run programs, and even install new software. You should find that its "prompt" resembles the below.</p>
-  <p>~/ $</p>
-  <h3><a href="#navigating-cs50-ide">Navigating CS50 IDE</a></h3>
-  <p>Okay, let's create a folder (otherwise known as a <strong>directory</strong>) in which your code for this problem will soon live. On the left side of the screen you should see a file tree listing the current contents of your CS50 IDE workspace (right now it should simply be a folder entitled ~/). Right-click in the blank space underneath that folder and select <strong>New Folder</strong> near the bottom of the context menu that pops up. This should create, as expected, a new folder for you entitled <strong>New Folder</strong> which you can rename now to chapter1. If you accidentally leave it named New Folder, simply right click on the folder, choose <strong>Rename</strong> from the context menu, and rename it. Inside chapter1, add another new folder named hello.</p>
-  <p>Front and center in the CS50 IDE workspace is a window wherein you'll be able to write your code. Right now, assuming you haven't played around with the tabs, that window is blank.</p>
-  <p>Let's create a new file to play around with. Right-click on your newly-created hello folder and choose <strong>New File</strong> from the context menu. Then, double-click on this new file (which should hopefully be called Untitled and which should be nested beneath hello in the file tree), and a blank window should open up a tab for Untitled as the active one.</p>
-  <p>Go ahead and type hello (or the ever-popular asdf) on line 1 of the document, and then notice how the tab's name now contains a red dot, indicating that you've made changes since the file was first opened. Select <strong>File &gt; Save</strong>, and that red dot should turn green and then disappear, indicating all of our changes are saved.</p>
-  <p>Untitled isn't exactly a useful name for this file though, is it? Let's fix that! In the file tree on the left, right-click on Untitled and select <strong>Rename</strong> from the context menu. Enter hello.txt when able, and then hit Enter on your keyboard. You should see the name of the file has changed both in the file tree on the left and in the name of the tab.</p>
-  <p>Okay, with hello.txt still open in your workspace, notice that beneath your document is that terminal window. Notice that the window's prompt is, assuming you haven't otherwise manipulated it</p>
-  <p>~/ $</p>
-  <p>(where ~/—i.e., your home directory—is the directory you are currently in.) If that's the case, based on the file tree should be both a chapter1 and a hello directory somewhere inside, since we created them just a few moments ago. Let's confirm as much.</p>
-  <p>Click somewhere inside of that terminal window and type</p>
-  <p>ls</p>
-  <p>and then Enter. That's a lowercase L and a lowercase S, which is shorthand notation for "list." Indeed, you should then see a list of the folders inside of your home directory, among which is chapter1! Let's open that folder! Type</p>
-  <p>cd chapter1</p>
-  <p>or even</p>
-  <p>cd ~/chapter1/</p>
-  <p>followed by Enter to change your directory to ~/chapter1/ (ergo, cd). You should find that your prompt changes to</p>
-  <p>~/chapter1/ $</p>
-  <p>confirming that you are indeed now inside of ~/chapter1/ (i.e., a directory called chapter1 inside of your home directory). Then type</p>
-  <p>cd hello</p>
-  <p>followed by Enter to enter into our directory hello. Now type</p>
-  <p>ls</p>
-  <p>followed by Enter. You should see hello.txt! Now, you can't click or double-click on that file's name there; it's just text. But that listing does confirm that hello.txt is where we hoped it would be.</p>
-  <p>Let's poke around a bit more. Go ahead and type</p>
-  <p>cd</p>
-  <p>and then Enter. It turns out that if you don't provide cd with a "command-line argument" (i.e., a directory's name), it whisks you back to the ~/ directory by default.</p>
-  <p>And indeed, your prompt should now be:</p>
-  <p>~/ $</p>
-  <p>Phew, home sweet home. Remember that everything we create in the CS50 IDE will ultimately live inside of ~/.</p>
-  <p>Make sense? If not, no worries; it soon will! It's in this terminal window that you'll soon be compiling your first program! For now, though, close the tab by clicking the small "x" in the tab for hello.txt (if you've made additional changes, you'll be asked if you want to save your file before the tab closes).</p>
-  <h2><a href="#specification">Specification</a></h2>
-  <p>Shall we have you write your first program? Inside of your <strong>hello</strong> folder, create a new file called <strong>hello.c</strong>, and then open that file in a tab. (Remember how?) Be sure to name the file just as we have, in all lowercase; files' and folders' names in Linux are "case-sensitive." Proceed to write your first program by typing precisely these lines into the file:</p>
-  <p>#include &lt;stdio.h&gt; int main(void) { printf("hello, world\n"); }</p>
-  <p>Notice how CS50 IDE adds "syntax highlighting" (i.e., color) as you type, though CS50 IDE's choice of colors might differ from this problem set's. Those colors aren't actually saved inside of the file itself; they're just added by CS50 IDE to make certain syntax stand out. Had you not saved the file as hello.c from the start, CS50 IDE wouldn't know (per the filename's extension) that you're writing C code, in which case those colors would be absent.</p>
-  <p>Do be sure that you type this program just right, else you're about to experience your first bug! In particular, capitalization matters, so don't accidentally capitalize words (unless they're between those two quotes). And don't overlook that one semicolon. C is quite nitpicky!</p>
-  <p>When done typing, select <strong>File &gt; Save</strong> (or hit command- or control-s), but don't quit. Recall that the red dot atop the tab should then disappear. Click anywhere in the terminal window beneath your code, and be sure that you're inside of ~/chapter1/hello. (Remember how? If not, type cd and then Enter, followed by cd chapter1/hello/ and then Enter.) Your prompt should be:</p>
-  <p>~/chapter1/hello/ $</p>
-  <p>Let's confirm that hello.c is indeed where it should be. Type</p>
-  <p>ls</p>
-  <p>followed by Enter, and you should see hello.c? If not, no worries; you probably just missed a small step. Best to restart these past several steps or ask for help!</p>
-  <p>Assuming you indeed see hello.c, let's try to compile! Cross your fingers and then type</p>
-  <p>make hello</p>
-  <p>at the prompt, followed by Enter. (Well, maybe don't cross your fingers whilst typing.) To be clear, type only hello here, not hello.c. If all that you see is another, identical prompt, that means it worked! Your source code has been translated to object code (0s and 1s) that you can now execute. Type</p>
-  <p>./hello</p>
-  <p>at your prompt, followed by Enter, and you should see the below:</p>
-  <p>hello, world</p>
-  <p>And if you type</p>
-  <p>ls</p>
-  <p>followed by Enter, you should see a new file, hello, alongside hello.c. The first of those files, hello, should have an asterisk after its name that, in this context, means it's "executable," a program that you can execute (i.e., run).</p>
-  <p>If, though, upon running make, you instead see some error(s), it's time to debug! (If the terminal window's too small to see everything, click and drag its top border upward to increase its height.) If you see an error like "expected declaration" or something just as mysterious, odds are you made a syntax error (i.e., typo) by omitting some character or adding something in the wrong place. Scour your code for any differences vis-à-vis the template above. It's easy to miss the slightest of things when learning to program, so do compare your code against ours character by character; odds are the mistake(s) will jump out! Anytime you make changes to your own code, just remember to re-save via <strong>File &gt; Save</strong> (or command- or control-s), then re-click inside of the terminal window, and then re-type</p>
-  <p>make hello</p>
-  <p>at your prompt, followed by Enter. (Just be sure that you are inside of ~/chapter1/hello/ within your terminal window, as your prompt will confirm or deny.) If still seeing errors, try "prepending" help50 to your command like this:</p>
-  <p>help50 make hello</p>
-  <p>That'll pass the output of make hello to a program called help50, which CS50's staff wrote. If help50 recognizes your error message, it'll offer some suggestions (in yellow). Just realize help50 is new this year, so odds are it won't recognize all error messages just yet!</p>
-  <p>Once you see no more errors, try "executing" (i.e., running) your program by typing</p>
-  <p>./hello</p>
-  <p>at your prompt, followed by Enter! Hopefully you now see whatever you told printf to print?</p>
-  <p>If not, reach out for help! Incidentally, if you find the terminal window too small for your tastes, know that you can open one in a bigger tab by clicking the circled plus (+) icon to the right of your hello.c tab.</p>
-  <h2><a href="#walkthrough">Walkthrough</a></h2>
-  <h2><a href="#usage">Usage</a></h2>
-  <p>Your program should behave per the example below. Assumed that the underlined text is what some user has typed.</p>
-  <p>$ ./hello hello, world</p>
-  <h2><a href="#testing">Testing</a></h2>
-  <h3><a href="#correctness">Correctness</a></h3>
-  <p>check50 cs50/problems/2019/ap/hello</p>
-  <p>Assuming your program is correct, you should then see output like</p>
-  <p>:) hello.c exists :) hello.c compiles :) prints "hello, world\n"</p>
-  <p>where each green smiley means your program passed a check (i.e., test). You may also see a URL at the bottom of check50's output, but that's just for staff (though you're welcome to visit it).</p>
-  <p>If you instead see yellow or red smileys, it means your code isn't correct! For instance, suppose you instead see the below.</p>
-  <p>:( hello.c exists \ expected hello.c to exist :| hello.c compiles \ can't check until a frown turns upside down :| prints "hello, world\n" \ can't check until a frown turns upside down</p>
-  <p>Because check50 doesn't think hello.c exists, as per the red smiley, odds are you uploaded the wrong file or misnamed your file. The other smileys, meanwhile, are yellow because those checks are dependent on hello.c existing, and so they weren't even run.</p>
-  <p>Suppose instead you see the below.</p>
-  <p>:) hello.c exists :) hello.c compiles :( prints "hello, world\n" \ expected output, but not "hello, world"</p>
-  <p>Odds are, in this case, you printed something other than hello, world\n verbatim, per the spec's expectations. In particular, the above suggests you printed hello, world, without a trailing newline (\n).</p>
-  <p>Know that check50 won't actually record your scores in CS50's gradebook. Rather, it lets you check your work's correctness before you submit your work. Once you actually submit your work (per the directions at this spec's end), CS50's staff will use check50 to evaluate your work's correctness officially.</p>
-  <h2><a href="#staff-solution">Staff Solution</a></h2>
-  <p>If you'd like to play with the staff's own implementation of hello, you may execute the below.</p>
-  <p>~cs50/2019/ap/chapter1/hello</p>
-  <h2><a href="#how-to-submit">How to Submit</a></h2>
-  <h3><a href="#step-1-of-3">Step 1 of 3</a></h3>
-  <p>Head to the <a href="https://ide.cs50.io">CS50 IDE</a> and ensure that hello.c is in ~/chapter1/hello, as with:</p>
-  <p>cd ~/chapter1/hello ls</p>
-  <p>If hello.c is not in ~/chapter1/hello, move it into that directory, as via mv (or via CS50 IDE's lefthand file browser).</p>
-  <h3><a href="#step-2-of-3">Step 2 of 3</a></h3>
-  <p>Visit <a href="https://submit.cs50.io">submit.cs50.io</a>, and login with your GitHub credentials. Then, head over to the email account you used to sign up for GitHub and accept the invitation link.</p>
-  <h3><a href="#step-3-of-3">Step 3 of 3</a></h3>
-  <p>Then, head back to the <a href="https://ide.cs50.io">CS50 IDE</a> to submit hello, as with:</p>
-  <p>+</p>
-  <p>cd ~/chapter1/hello submit50 cs50/problems/2019/ap/hello</p>
-  <p>+ inputting your GitHub username and GitHub password as prompted.</p>
-  <p>If you run into any trouble, email <a href="mailto:sysadmins@cs50.harvard.edu">sysadmins@cs50.harvard.edu</a>!</p>
-  <p>You may resubmit any problem as many times as you'd like before the deadline.</p>
-  <p>Your submission should be graded for correctness within 2 minutes, at which point your score will appear at <a href="https://submit.cs50.io/">submit.cs50.io</a>!</p>
-  <h2><a href="#hints">Hints</a></h2>
-  <p>Be sure to re-type (and not just copy and paste!) the code we've provided you above to get this program running. It'll be good to develop this muscle memory starting now!</p>
-  <p>This was Hello.</p>
+<head>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Problem: Hello</title>
+</head>
+	
+<body class="toc2 toc-left">
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%; margin-left:5%;">
+<h3 class="w3-bar-item">Table of Contents</h3>
+        <a class="w3-bar-item w3-button" href="#tldr">tl;dr</a>
+        <a class="w3-bar-item w3-button" href="#academic-honesty"> Academic Honesty</a>
+        <a class="w3-bar-item w3-button" href="#reasonable"> Reasonable</a>
+        <a class="w3-bar-item w3-button" href="#not-reasonable"> Not Reasonable</a>
+        <a class="w3-bar-item w3-button" href="#getting-started"> Getting Started</a>
+        <a class="w3-bar-item w3-button" href="#logging-in"> Logging In</a>
+        <a class="w3-bar-item w3-button" href="#updating"> Updating</a>
+        <a class="w3-bar-item w3-button" href="#navigating-cs50-ide"> Navigating CS50 IDE</a>
+        <a class="w3-bar-item w3-button" href="#specification"> Specification<\a>
+        <a class="w3-bar-item w3-button" href="#walkthrough"> Walkthrough<\a>
+	<a class="w3-bar-item w3-button" href="#usage"> Usage<\a>
+	<a class="w3-bar-item w3-button" href="#testing"> Testing</a>
+        <a class="w3-bar-item w3-button" href="#correctness"> Correctness</a>
+        <a class="w3-bar-item w3-button" href="#staff-solution"> Staff Solution<\a>
+	<a class="w3-bar-item w3-button" href="#how-to-submit"> How to Submit</a>
+        <a class="w3-bar-item w3-button" href="#step-1-of-3"> Step 1 of 3<\a>
+	<a class="w3-bar-item w3-button" href="#step-2-of-3"> Step 2 of 3<\a>
+	<a class="w3-bar-item w3-button" href="#step-3-of-3"> Step 3 of 3</a>
+        <a href="#hints">Hints</a>
+</div>
+
+<div style="margin-left:32%">
+        <h1>Problem: Hello</h1>
+        <div id="preamble">
+        <div class="sectionbody">
+        <div class="paragraph">
+        <p>Don&#8217;t be alarmed by the length of this problem&#8217;s specification. Most of it is just instructions for getting your programming environment set up and learning how to navigate within it. Once these steps are completed, you&#8217;ll be good to go for the rest of the year in CS50 AP!</p>
+        </div>
+        </div>
+        </div>
+        <div class="sect1">
+        <h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+        <p>Implement a program that prints out a simple greeting to the user, per the below.</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code>$ <span class="underline">./hello</span>
+        hello, world</code></pre>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="sect1">
+        <h2 id="academic-honesty"><a class="link" href="#academic-honesty">Academic Honesty</a></h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+        <p>This course&#8217;s philosophy on academic honesty is best stated as "be reasonable." The course recognizes that interactions with classmates and others can facilitate mastery of the course&#8217;s material. However, there remains a line between enlisting the help of another and submitting the work of another. This policy characterizes both sides of that line.</p>
+        </div>
+        <div class="paragraph">
+        <p>The essence of all work that you submit to this course must be your own. Collaboration on problems is not permitted (unless explicitly stated otherwise) except to the extent that you may ask classmates and others for help so long as that help does not reduce to another doing your work for you. Generally speaking, when asking for help, you may show your code or writing to others, but you may not view theirs, so long as you and they respect this policy&#8217;s other constraints. Collaboration on quizzes and tests is not permitted at all. Collaboration on the final project is permitted to the extent prescribed by its specification.</p>
+        </div>
+        <div class="paragraph">
+        <p>Below are rules of thumb that (inexhaustively) characterize acts that the course considers reasonable and not reasonable. If in doubt as to whether some act is reasonable, do not commit it until you solicit and receive approval in writing from your instructor. If a violation of this policy is suspected and confirmed, your instructor reserves the right to impose local sanctions on top of any disciplinary outcome that may include an unsatisfactory or failing grade for work submitted or for the course itself.</p>
+        </div>
+        <div class="sect2">
+        <h3 id="reasonable"><a class="link" href="#reasonable">Reasonable</a></h3>
+        <div class="ulist">
+        <ul>
+        <li>
+        <p>Communicating with classmates about problems in English (or some other spoken language).</p>
+        </li>
+        <li>
+        <p>Discussing the course&#8217;s material with others in order to understand it better.</p>
+        </li>
+        <li>
+        <p>Helping a classmate identify a bug in his or her code, such as by viewing, compiling, or running his or her code, even on your own computer.</p>
+        </li>
+        <li>
+        <p>Incorporating snippets of code that you find online or elsewhere into your own code, provided that those snippets are not themselves solutions to assigned problems and that you cite the snippets' origins.</p>
+        </li>
+        <li>
+        <p>Reviewing past years' quizzes, tests, and solutions thereto.</p>
+        </li>
+        <li>
+        <p>Sending or showing code that you&#8217;ve written to someone, possibly a classmate, so that he or she might help you identify and fix a bug.</p>
+        </li>
+        <li>
+        <p>Sharing snippets of your own solutions to problems online so that others might help you identify and fix a bug or other issue.</p>
+        </li>
+        <li>
+        <p>Turning to the web or elsewhere for instruction beyond the course&#8217;s own, for references, and for solutions to technical difficulties, but not for outright solutions to problems or your own final project.</p>
+        </li>
+        <li>
+        <p>Whiteboarding solutions to problems with others using diagrams or pseudocode but not actual code.</p>
+        </li>
+        <li>
+        <p>Working with (and even paying) a tutor to help you with the course, provided the tutor does not do your work for you.</p>
+        </li>
+        </ul>
+        </div>
+        </div>
+        <div class="sect2">
+        <h3 id="not-reasonable"><a class="link" href="#not-reasonable">Not Reasonable</a></h3>
+        <div class="ulist">
+        <ul>
+        <li>
+        <p>Accessing a solution to some problem prior to (re-)submitting your own.</p>
+        </li>
+        <li>
+        <p>Asking a classmate to see his or her solution to a problem before (re-)submitting your own.</p>
+        </li>
+        <li>
+        <p>Decompiling, deobfuscating, or disassembling the staff&#8217;s solutions to problems.</p>
+        </li>
+        <li>
+        <p>Failing to cite (as with comments) the origins of code, writing, or techniques that you discover outside of the course&#8217;s own lessons and integrate into your own work, even while respecting this policy&#8217;s other constraints.</p>
+        </li>
+        <li>
+        <p>Giving or showing to a classmate a solution to a problem when it is he or she, and not you, who is struggling to solve it.</p>
+        </li>
+        <li>
+        <p>Looking at another individual&#8217;s work during a quiz or test.</p>
+        </li>
+        <li>
+        <p>Paying or offering to pay an individual for work that you may submit as (part of) your own.</p>
+        </li>
+        <li>
+        <p>Providing or making available solutions to problems to individuals who might take this course in the future.</p>
+        </li>
+        <li>
+        <p>Searching for, soliciting, or viewing a quiz&#8217;s questions or answers prior to taking the quiz.</p>
+        </li>
+        <li>
+        <p>Searching for or soliciting outright solutions to problems online or elsewhere.</p>
+        </li>
+        <li>
+        <p>Splitting a problem&#8217;s workload with another individual and combining your work (unless explicitly authorized by the problem itself).</p>
+        </li>
+        <li>
+        <p>Submitting (after possibly modifying) the work of another individual beyond allowed snippets.</p>
+        </li>
+        <li>
+        <p>Submitting the same or similar work to this course that you have submitted or will submit to another.</p>
+        </li>
+        <li>
+        <p>Using resources during a quiz beyond those explicitly allowed in the quiz&#8217;s instructions.</p>
+        </li>
+        <li>
+        <p>Viewing another&#8217;s solution to a problem and basing your own solution on it.</p>
+        </li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="sect1">
+        <h2 id="getting-started"><a class="link" href="#getting-started">Getting Started</a></h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+        <p>Recall that CS50 IDE is a web-based "integrated development environment" that allows you to program "in the cloud," without installing any software locally. Underneath the hood is a popular operating system, Ubuntu Linux, that’s been "containerized" with open-source software called Docker, that allows multiple users (like you!) to share the operating system’s "kernel" (its nucleus, so to speak) and files, even while having files of their own. Indeed, CS50 IDE provides you with your very own "workspace" (i.e., storage space) in which you can save your own files and folders (aka directories).</p>
+        </div>
+        <div class="paragraph">
+        <p>After all, wouldn&#8217;t you like to get programming right away, without having to download, install, or configure much of anything at all?</p>
+        </div>
+        <iframe scrolling="no" allowtransparency="true" src="yes.gif" width="480" height="268" frameBorder="0" allowFullScreen></iframe>
+        <div class="sect2">
+        <h3 id="logging-in"><a class="link" href="#logging-in">Logging In</a></h3>
+        <div class="paragraph">
+        <p>Head to <a href="https://ide.cs50.io/">ide.cs50.io</a> and log into CS50 IDE. You may be prompted (again) for your email address. If so, after providing it, click <strong>Private</strong> under <strong>Hosted workspace</strong>, then choose <strong>Harvard&#8217;s CS50</strong> under <strong>Choose a template</strong>, and click <strong>Create workspace</strong>.</p>
+        </div>
+        <div class="paragraph">
+        <p>You should then be informed that CS50 IDE (aka Cloud9, the software that underlies CS50 IDE) is "creating your workspace" and "creating your container," which might take a moment. You should eventually see your workspace, which should resemble David&#8217;s from Week 1. If not, do just email the course&#8217;s heads to inquire!</p>
+        </div>
+        </div>
+        <div class="sect2">
+        <h3 id="updating"><a class="link" href="#updating">Updating</a></h3>
+        <div class="paragraph">
+        <p>Toward the bottom of CS50 IDE&#8217;s UI is a "terminal window" (light blue, by default), a command-line interface (CLI) that allows you to explore your workspace&#8217;s files and directories, compile code, run programs, and even install new software. You should find that its "prompt" resembles the below.</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code data-lang="text"><span></span>~/ $</code></pre>
+        </div>
+        </div>
+        </div>
+        <div class="sect2">
+        <h3 id="navigating-cs50-ide"><a class="link" href="#navigating-cs50-ide">Navigating CS50 IDE</a></h3>
+        <div class="paragraph">
+        <p>Okay, let&#8217;s create a folder (otherwise known as a <strong>directory</strong>) in which your code for this problem will soon live. On the left side of the screen you should see a file tree listing the current contents of your CS50 IDE workspace (right now it should simply be a folder entitled <code>~/</code>). Right-click in the blank space underneath that folder and select <strong>New Folder</strong> near the bottom of the context menu that pops up. This should create, as expected, a new folder for you entitled <strong>New Folder</strong> which you can rename now to <code>chapter1</code>. If you accidentally leave it named <code>New Folder</code>, simply right click on the folder, choose <strong>Rename</strong> from the context menu, and rename it. Inside <code>chapter1</code>, add another new folder named <code>hello</code>.</p>
+        </div>
+        <div class="paragraph">
+        <p>Front and center in the CS50 IDE workspace is a window wherein you&#8217;ll be able to write your code. Right now, assuming you haven&#8217;t played around with the tabs, that window is blank.</p>
+        </div>
+        <div class="paragraph">
+        <p>Let&#8217;s create a new file to play around with. Right-click on your newly-created <code>hello</code> folder and choose <strong>New File</strong> from the context menu. Then, double-click on this new file (which should hopefully be called <code>Untitled</code> and which should be nested beneath <code>hello</code> in the file tree), and a blank window should open up a tab for <code>Untitled</code> as the active one.</p>
+        </div>
+        <div class="paragraph">
+        <p>Go ahead and type <code>hello</code> (or the ever-popular <code>asdf</code>) on line 1 of the document, and then notice how the tab&#8217;s name now contains a red dot, indicating that you&#8217;ve made changes since the file was first opened. Select <strong>File &gt; Save</strong>, and that red dot should turn green and then disappear, indicating all of our changes are saved.</p>
+        </div>
+        <div class="paragraph">
+        <p><code>Untitled</code> isn&#8217;t exactly a useful name for this file though, is it? Let&#8217;s fix that! In the file tree on the left, right-click on <code>Untitled</code> and select <strong>Rename</strong> from the context menu. Enter <code>hello.txt</code> when able, and then hit Enter on your keyboard. You should see the name of the file has changed both in the file tree on the left and in the name of the tab.</p>
+        </div>
+        <div class="paragraph">
+        <p>Okay, with <code>hello.txt</code> still open in your workspace, notice that beneath your document is that terminal window. Notice that the window&#8217;s prompt is, assuming you haven&#8217;t otherwise manipulated it</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span></span>~/ $</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>(where <code>~/</code>—i.e., your home directory—is the directory you are currently in.) If that&#8217;s the case, based on the file tree should be both a <code>chapter1</code> and a <code>hello</code> directory somewhere inside, since we created them just a few moments ago. Let&#8217;s confirm as much.</p>
+        </div>
+        <div class="paragraph">
+        <p>Click somewhere inside of that terminal window and type</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span></span>ls</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>and then Enter. That&#8217;s a lowercase <code>L</code> and a lowercase <code>S</code>, which is shorthand notation for "list." Indeed, you should then see a list of the folders inside of your home directory, among which is <code>chapter1</code>! Let&#8217;s open that folder! Type</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span></span>cd chapter1</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>or even</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span></span>cd ~/chapter1/</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>followed by Enter to <span class="underline">c</span>hange your <span class="underline">d</span>irectory to <code>~/chapter1/</code> (ergo, <code>cd</code>). You should find that your prompt changes to</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span></span>~/chapter1/ $</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>confirming that you are indeed now inside of <code>~/chapter1/</code> (i.e., a directory called <code>chapter1</code> inside of your home directory). Then type</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span></span>cd hello</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>followed by Enter to enter into our directory <code>hello</code>. Now type</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span></span>ls</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>followed by Enter. You should see <code>hello.txt</code>! Now, you can&#8217;t click or double-click on that file&#8217;s name there; it&#8217;s just text. But that listing does confirm that <code>hello.txt</code> is where we hoped it would be.</p>
+        </div>
+        <div class="paragraph">
+        <p>Let&#8217;s poke around a bit more. Go ahead and type</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span></span>cd</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>and then Enter. It turns out that if you don&#8217;t provide <code>cd</code> with a "command-line argument" (i.e., a directory&#8217;s name), it whisks you back to the <code>~/</code> directory by default.</p>
+        </div>
+        <div class="paragraph">
+        <p>And indeed, your prompt should now be:</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span></span>~/ $</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>Phew, home sweet home. Remember that everything we create in the CS50 IDE will ultimately live inside of <code>~/</code>.</p>
+        </div>
+        <div class="paragraph">
+        <p>Make sense? If not, no worries; it soon will! It&#8217;s in this terminal window that you&#8217;ll soon be compiling your first program! For now, though, close the tab by clicking the small "x" in the tab for <code>hello.txt</code> (if you&#8217;ve made additional changes, you&#8217;ll be asked if you want to save your file before the tab closes).</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="sect1">
+        <h2 id="specification"><a class="link" href="#specification">Specification</a></h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+        <p>Shall we have you write your first program? Inside of your <strong>hello</strong> folder, create a new file called <strong>hello.c</strong>, and then open that file in a tab. (Remember how?) Be sure to name the file just as we have, in all lowercase; files' and folders' names in Linux are "case-sensitive." Proceed to write your first program by typing precisely these lines into the file:</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code data-lang="c"><span></span><span class="tok-cp">#include</span> <span class="tok-cpf">&lt;stdio.h&gt;</span><span class="tok-cp"></span>
+        
+        <span class="tok-kt">int</span> <span class="tok-nf">main</span><span class="tok-p">(</span><span class="tok-kt">void</span><span class="tok-p">)</span>
+        <span class="tok-p">{</span>
+            <span class="tok-n">printf</span><span class="tok-p">(</span><span class="tok-s">&quot;hello, world</span><span class="tok-se">\n</span><span class="tok-s">&quot;</span><span class="tok-p">);</span>
+        <span class="tok-p">}</span></code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>Notice how CS50 IDE adds "syntax highlighting" (i.e., color) as you type, though CS50 IDE&#8217;s choice of colors might differ from this problem set&#8217;s. Those colors aren&#8217;t actually saved inside of the file itself; they&#8217;re just added by CS50 IDE to make certain syntax stand out. Had you not saved the file as <code>hello.c</code> from the start, CS50 IDE wouldn&#8217;t know (per the filename&#8217;s extension) that you&#8217;re writing C code, in which case those colors would be absent.</p>
+        </div>
+        <div class="paragraph">
+        <p>Do be sure that you type this program just right, else you&#8217;re about to experience your first bug! In particular, capitalization matters, so don&#8217;t accidentally capitalize words (unless they&#8217;re between those two quotes). And don&#8217;t overlook that one semicolon. C is quite nitpicky!</p>
+        </div>
+        <div class="paragraph">
+        <p>When done typing, select <strong>File &gt; Save</strong> (or hit command- or control-s), but don&#8217;t quit. Recall that the red dot atop the tab should then disappear. Click anywhere in the terminal window beneath your code, and be sure that you&#8217;re inside of <code>~/chapter1/hello</code>. (Remember how? If not, type <code>cd</code> and then Enter, followed by <code>cd chapter1/hello/</code> and then Enter.) Your prompt should be:</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code data-lang="text"><span></span>~/chapter1/hello/ $</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>Let&#8217;s confirm that <code>hello.c</code> is indeed where it should be. Type</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code data-lang="text"><span></span>ls</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>followed by Enter, and you should see <code>hello.c</code>? If not, no worries; you probably just missed a small step. Best to restart these past several steps or ask for help!</p>
+        </div>
+        <div class="paragraph">
+        <p>Assuming you indeed see <code>hello.c</code>, let&#8217;s try to compile! Cross your fingers and then type</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code data-lang="text"><span></span>make hello</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>at the prompt, followed by Enter. (Well, maybe don&#8217;t cross your fingers whilst typing.) To be clear, type only <code>hello</code> here, not <code>hello.c</code>. If all that you see is another, identical prompt, that means it worked! Your source code has been translated to object code (0s and 1s) that you can now execute. Type</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code data-lang="text"><span></span>./hello</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>at your prompt, followed by Enter, and you should see the below:</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code data-lang="text"><span></span>hello, world</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>And if you type</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code data-lang="text"><span></span>ls</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>followed by Enter, you should see a new file, <code>hello</code>, alongside <code>hello.c</code>. The first of those files, <code>hello</code>, should have an asterisk after its name that, in this context, means it&#8217;s "executable," a program that you can execute (i.e., run).</p>
+        </div>
+        <div class="paragraph">
+        <p>If, though, upon running <code>make</code>, you instead see some error(s), it&#8217;s time to debug! (If the terminal window&#8217;s too small to see everything, click and drag its top border upward to increase its height.) If you see an error like "expected declaration" or something just as mysterious, odds are you made a syntax error (i.e., typo) by omitting some character or adding something in the wrong place. Scour your code for any differences vis-à-vis the template above. It&#8217;s easy to miss the slightest of things when learning to program, so do compare your code against ours character by character; odds are the mistake(s) will jump out! Anytime you make changes to your own code, just remember to re-save via <strong>File &gt; Save</strong> (or command- or control-s), then re-click inside of the terminal window, and then re-type</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code data-lang="text"><span></span>make hello</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>at your prompt, followed by Enter. (Just be sure that you are inside of <code>~/chapter1/hello/</code> within your terminal window, as your prompt will confirm or deny.) If still seeing errors, try "prepending" <code>help50</code> to your command like this:</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code data-lang="text"><span></span>help50 make hello</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>That&#8217;ll pass the output of <code>make hello</code> to a program called <code>help50</code>, which CS50&#8217;s staff wrote. If <code>help50</code> recognizes your error message, it&#8217;ll offer some suggestions (in yellow). Just realize <code>help50</code> is new this year, so odds are it won&#8217;t recognize all error messages just yet!</p>
+        </div>
+        <div class="paragraph">
+        <p>Once you see no more errors, try "executing" (i.e., running) your program by typing</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code data-lang="text"><span></span>./hello</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>at your prompt, followed by Enter! Hopefully you now see whatever you told <code>printf</code> to print?</p>
+        </div>
+        <div class="paragraph">
+        <p>If not, reach out for help!  Incidentally, if you find the terminal window too small for your tastes, know that you can open one in a bigger tab by clicking the circled plus (+) icon to the right of your <code>hello.c</code> tab.</p>
+        </div>
+        </div>
+        </div>
+        <div class="sect1">
+        <h2 id="walkthrough"><a class="link" href="#walkthrough">Walkthrough</a></h2>
+        <div class="sectionbody">
+        <div class="videoblock">
+        <div class="content">
+        <iframe src="https://www.youtube.com/embed/vbkTzOytISY?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="sect1">
+        <h2 id="usage"><a class="link" href="#usage">Usage</a></h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+        <p>Your program should behave per the example below. Assumed that the underlined text is what some user has typed.</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code>$ <span class="underline">./hello</span>
+        hello, world</code></pre>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="sect1">
+        <h2 id="testing"><a class="link" href="#testing">Testing</a></h2>
+        <div class="sectionbody">
+        <div class="sect2">
+        <h3 id="correctness"><a class="link" href="#correctness">Correctness</a></h3>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code data-lang="text"><span></span>check50 cs50/problems/2019/ap/hello</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>Assuming your program is correct, you should then see output like</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span class="green">:) hello.c exists</span>
+        <span class="green">:) hello.c compiles</span>
+        <span class="green">:) prints "hello, world\n"</span></code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>where each green smiley means your program passed a check (i.e., test). You may also see a URL at the bottom of <code>check50</code>'s output, but that&#8217;s just for staff (though you&#8217;re welcome to visit it).</p>
+        </div>
+        <div class="paragraph">
+        <p>If you instead see yellow or red smileys, it means your code isn&#8217;t correct! For instance, suppose you instead see the below.</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span class="red">:( hello.c exists</span>
+          \ expected hello.c to exist
+        <span class="yellow">:| hello.c compiles</span>
+          \ can't check until a frown turns upside down
+        <span class="yellow">:| prints "hello, world\n"</span>
+          \ can't check until a frown turns upside down</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>Because <code>check50</code> doesn&#8217;t think <code>hello.c</code> exists, as per the red smiley, odds are you uploaded the wrong file or misnamed your file. The other smileys, meanwhile, are yellow because those checks are dependent on <code>hello.c</code> existing, and so they weren&#8217;t even run.</p>
+        </div>
+        <div class="paragraph">
+        <p>Suppose instead you see the below.</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span class="green">:) hello.c exists</span>
+        <span class="green">:) hello.c compiles</span>
+        <span class="red">:( prints "hello, world\n"</span>
+          \ expected output, but not "hello, world"</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>Odds are, in this case, you printed something other than <code>hello, world\n</code> verbatim, per the spec&#8217;s expectations. In particular, the above suggests you printed <code>hello, world</code>, without a trailing newline (<code>\n</code>).</p>
+        </div>
+        <div class="paragraph">
+        <p>Know that <code>check50</code> won&#8217;t actually record your scores in CS50&#8217;s gradebook. Rather, it lets you check your work&#8217;s correctness <em>before</em> you submit your work. Once you actually submit your work (per the directions at this spec&#8217;s end), CS50&#8217;s staff will use <code>check50</code> to evaluate your work&#8217;s correctness officially.</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="sect1">
+        <h2 id="staff-solution"><a class="link" href="#staff-solution">Staff Solution</a></h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+        <p>If you&#8217;d like to play with the staff&#8217;s own implementation of <code>hello</code>, you may execute the below.</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span></span>~cs50/2019/ap/chapter1/hello</code></pre>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="sect1">
+        <h2 id="how-to-submit"><a class="link" href="#how-to-submit">How to Submit</a></h2>
+        <div class="sectionbody">
+        <div class="sect2">
+        <h3 id="step-1-of-3"><a class="link" href="#step-1-of-3">Step 1 of 3</a></h3>
+        <div class="paragraph">
+        <p>Head to the <a href="https://ide.cs50.io">CS50 IDE</a> and ensure that <code>hello.c</code> is in <code>~/chapter1/hello</code>, as with:</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span></span>cd ~/chapter1/hello
+        ls</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>If <code>hello.c</code> is not in <code>~/chapter1/hello</code>, move it into that directory, as via <code>mv</code> (or via CS50 IDE&#8217;s lefthand file browser).</p>
+        </div>
+        </div>
+        <div class="sect2">
+        <h3 id="step-2-of-3"><a class="link" href="#step-2-of-3">Step 2 of 3</a></h3>
+        <div class="paragraph">
+        <p>Visit <a href="https://submit.cs50.io">submit.cs50.io</a>, and login with your GitHub credentials. Then, head over to the email account you used to sign up for GitHub and accept the invitation link.</p>
+        </div>
+        </div>
+        <div class="sect2">
+        <h3 id="step-3-of-3"><a class="link" href="#step-3-of-3">Step 3 of 3</a></h3>
+        <div class="paragraph">
+        <p>Then, head back to the <a href="https://ide.cs50.io">CS50 IDE</a> to submit <code>hello</code>, as with:</p>
+        </div>
+        <div class="paragraph">
+        <p>+</p>
+        </div>
+        <div class="listingblock">
+        <div class="content">
+        <pre class="pygments highlight"><code><span></span>cd ~/chapter1/hello
+        submit50 cs50/problems/2019/ap/hello</code></pre>
+        </div>
+        </div>
+        <div class="paragraph">
+        <p>+
+        inputting your GitHub username and GitHub password as prompted.</p>
+        </div>
+        <div class="paragraph">
+        <p>If you run into any trouble, email <a href="mailto:sysadmins@cs50.harvard.edu">sysadmins@cs50.harvard.edu</a>!</p>
+        </div>
+        <div class="paragraph">
+        <p>You may resubmit any problem as many times as you&#8217;d like before the deadline.</p>
+        </div>
+        <div class="paragraph">
+        <p>Your submission should be graded for correctness within 2 minutes, at which point your score will appear at <a href="https://submit.cs50.io/">submit.cs50.io</a>!</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="sect1">
+        <h2 id="hints"><a class="link" href="#hints">Hints</a></h2>
+        <div class="sectionbody">
+        <div class="paragraph">
+        <p>Be sure to re-type (and not just copy and paste!) the code we&#8217;ve provided you above to get this program running. It&#8217;ll be good to develop this muscle memory starting now!</p>
+        </div>
+        <div class="paragraph">
+        <p>This was Hello.</p>
+        </div>
+        </div>
+        </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
+            
+
 </html>
