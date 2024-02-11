@@ -6,7 +6,7 @@
 
 * [Notes](notes)
 * Problems
-  * [Hello](https://docs.cs50.net/2019/ap/problems/hello/hello.html)
+  * [Hello](prob/hello.html)
   * [Fahrenheit](https://docs.cs50.net/2019/ap/problems/fahrenheit/fahrenheit.html)
   * [ISBN](https://docs.cs50.net/2019/ap/problems/isbn/isbn.html)
   * [Pennies](https://docs.cs50.net/2019/ap/problems/pennies/pennies.html)
