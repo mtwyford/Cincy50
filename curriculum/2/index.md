@@ -1,3 +1,5 @@
+* [Return](https://mtwyford.github.io/Cincy50/Curriculum/)
+
 # Chapter 2
 
 * Demos
