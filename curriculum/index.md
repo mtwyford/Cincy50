@@ -1,3 +1,5 @@
+* [Return Home](https://mtwyford.github.io/Cincy50/)
+
 # CS50 Core Curriculum
 
 * [Chapter 0](0)
