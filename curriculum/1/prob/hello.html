@@ -7,7 +7,7 @@
     <title>Problem: Hello</title>
 </head>
 	
-<body class="toc2 toc-left">
+<body class="toc2 toc-left" style="margin-right:5%;">
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%; margin-left:5%;">
 <h3 class="w3-bar-item">Table of Contents</h3>
     <a class="w3-bar-item w3-button" href="#tldr">tl;dr</a>
@@ -148,9 +148,9 @@
     <p>Now - let's create a file in the new folder, week1 so we can write code in the file. Type <code>code hello.c</code> next to the prompt.  Hit Enter.  Now - you should see a new tab appear at the top 'edit' window and - if you move your mose and click on the 'week1' folder in the top left a new file, 'hello.c' should appear.  In the command prompt or terminal, type <code>ls</code>.  Notice that the terminal should look similar to the picture below (I'm using a dark mode theme) <br/>
 	<img src="hello.png"></p>
 	<p>Okay, on the top pane or window, you should see the tab labelled <code>hello.c</code> Let's write some code!</p>
-    </div>div>   
+    </div>
     
-		<div class="sect1">
+<div class="sect1">
     <h2 id="specification"><a class="link" href="#specification">Specification</a></h2>
     <div class="sectionbody">
     <div class="paragraph">
@@ -227,7 +227,7 @@
     <p>followed by Enter, you should see a new file, <code>hello</code>, alongside <code>hello.c</code>. The first of those files, <code>hello</code>, should have an asterisk after its name that, in this context, means it&#8217;s "executable," a program that you can execute (i.e., run).</p>
     </div>
     <div class="paragraph">
-    <p>If, though, upon running <code>make</code>, you instead see some error(s), it&#8217;s time to debug! (If the terminal window&#8217;s too small to see everything, click and drag its top border upward to increase its height.) If you see an error like "expected declaration" or something just as mysterious, odds are you made a syntax error (i.e., typo) by omitting some character or adding something in the wrong place. Scour your code for any differences vis-à-vis the template above. It&#8217;s easy to miss the slightest of things when learning to program, so do compare your code against ours character by character; odds are the mistake(s) will jump out! Anytime you make changes to your own code, just remember to re-save via <strong>File &gt; Save</strong> (or command- or control-s), then re-click inside of the terminal window, and then re-type</p>
+    <p>If, though, upon running <code>make</code>, you instead see some error(s), it&#8217;s time to debug! (If the terminal window&#8217;s too small to see everything, click and drag its top border upward to increase its height.) If you see an error like "expected declaration" or something just as mysterious, odds are you made a syntax error (i.e., typo) by omitting some character or adding something in the wrong place. Scour your code for any differences using the code sample above. It&#8217;s easy to miss the slightest of things when learning to program, so do compare your code against ours character by character; odds are the mistake(s) will jump out! Anytime you make changes to your own code, just remember you need to recompile or type </p>
     </div>
     <div class="listingblock">
     <div class="content">
@@ -235,17 +235,8 @@
     </div>
     </div>
     <div class="paragraph">
-    <p>at your prompt, followed by Enter. (Just be sure that you are inside of <code>~/chapter1/hello/</code> within your terminal window, as your prompt will confirm or deny.) If still seeing errors, try "prepending" <code>help50</code> to your command like this:</p>
+    <p>at your prompt, followed by Enter. (Just be sure that you are inside of <code>week1/ $</code> within your terminal window, as your prompt will confirm or deny.) If still seeing errors, ask a neighbor to guide not give, talk to your duck or ask me (In that order).</p>
     </div>
-    <div class="listingblock">
-    <div class="content">
-    <pre class="pygments highlight"><code data-lang="text"><span></span>help50 make hello</code></pre>
-    </div>
-    </div>
-    <div class="paragraph">
-    <p>That&#8217;ll pass the output of <code>make hello</code> to a program called <code>help50</code>, which CS50&#8217;s staff wrote. If <code>help50</code> recognizes your error message, it&#8217;ll offer some suggestions (in yellow). Just realize <code>help50</code> is new this year, so odds are it won&#8217;t recognize all error messages just yet!</p>
-    </div>
-    <div class="paragraph">
     <p>Once you see no more errors, try "executing" (i.e., running) your program by typing</p>
     </div>
     <div class="listingblock">
@@ -257,20 +248,10 @@
     <p>at your prompt, followed by Enter! Hopefully you now see whatever you told <code>printf</code> to print?</p>
     </div>
     <div class="paragraph">
-    <p>If not, reach out for help!  Incidentally, if you find the terminal window too small for your tastes, know that you can open one in a bigger tab by clicking the circled plus (+) icon to the right of your <code>hello.c</code> tab.</p>
+    <p>If not, reach out for help!  Incidentally, if you find the terminal window too small for your tastes, try zooming in (control and the plus sign or command and plus sign ).</p>
     </div>
     </div>
-    </div>
-    <div class="sect1">
-    <h2 id="walkthrough"><a class="link" href="#walkthrough">Walkthrough</a></h2>
-    <div class="sectionbody">
-    <div class="videoblock">
-    <div class="content">
-    <iframe src="https://www.youtube.com/embed/vbkTzOytISY?rel=0" frameborder="0" allowfullscreen></iframe>
-    </div>
-    </div>
-    </div>
-    </div>
+		
     <div class="sect1">
     <h2 id="usage"><a class="link" href="#usage">Usage</a></h2>
     <div class="sectionbody">
