@@ -13,15 +13,14 @@
     <body class="toc2 toc-left" style="margin-right:5%;">
 	<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%; margin-left:5%;">
     <div id="header">
-    <div class="toc2" id="toc">
     <div id="toctitle">Table of Contents</div>
     <ul class="sectlevel1">
-		<li><a href="#tldr">tl;dr</a></li>
+	<li><a href="#tldr">tl;dr</a></li>
 		<li><a href="#academic-honesty">Academic Honesty</a>
-	<ul class="sectlevel2">
-		<li><a href="#reasonable">Reasonable</a></li>
-		<li><a href="#not-reasonable">Not Reasonable</a></li>
-	</ul>
+		<ul class="sectlevel2">
+			<li><a href="#reasonable">Reasonable</a></li>
+			<li><a href="#not-reasonable">Not Reasonable</a></li>
+		</ul>
 		<li><a href="#turning-up-the-heat">Turning Up the Heat</a></li>
 		<li><a href="#a-cool-look-back">A Cool Look Back</a></li>
 		<li><a href="#getting-warmer">Getting Warmer</a></li>
@@ -31,28 +30,31 @@
 				<li><a href="#style">Style</a></li>
 			</ul>
 		</li>
-	<li><a href="#staff-solution">Staff Solution</a></li>
-	<li><a href="#how-to-submit">How to Submit</a>
-		<ul class="sectlevel2">
-			<li><a href="#step-1-of-2">Step 1 of 2</a></li>
-			<li><a href="#step-2-of-2">Step 2 of 2</a></li>
-		</ul>
-	</li>
-</ul>
-                </div>
-            </div>
-            <div id="content">
-                <h1>Problem: Fahrenheit</h1>
-<div class="sect1">
-<h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Implement a program that converts degrees in Celsius to Fahrenheit, per the below.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="pygments highlight"><code>$ <span class="underline">./fahrenheit</span>
-C: <span class="underline">0</span>
+		<li><a href="#staff-solution">Staff Solution</a></li>
+		<li><a href="#how-to-submit">How to Submit</a>
+			<ul class="sectlevel2">
+				<li><a href="#step-1-of-2">Step 1 of 2</a></li>
+				<li><a href="#step-2-of-2">Step 2 of 2</a></li>
+			</ul>
+		</li>
+	</ul>
+    </div>
+    </div>
+	</div>
+
+<div style="margin-left:32%">
+    <div id="content">
+    <h1>Problem: Fahrenheit</h1>
+	<div class="sect1">
+	<h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
+	<div class="sectionbody">
+	<div class="paragraph">
+	<p>Implement a program that converts degrees in Celsius to Fahrenheit, per the below.</p>
+	</div>
+	<div class="listingblock">
+	<div class="content">
+	<pre class="pygments highlight"><code>$ <span class="underline">./temp</span>
+	C: <span class="underline">0</span>
 F: 32.0</code></pre>
 </div>
 </div>
@@ -257,14 +259,14 @@ Hello, Alice!</code></pre>
 <h2 id="getting-warmer"><a class="link" href="#getting-warmer">Getting Warmer</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Now, create a file called <code>fahrenheit.c</code> (remember how?), ensuring that it is inside of a subdirectory called <code>fahrenheit</code> inside of your <code>chapter1</code> directory, and then double-click on that file in the file tree to the left. You should now have an open window in your text editor with the tab name <code>fahrenheit.c</code>, and you&#8217;re ready to write your first utility program&#8212;&#8203;a program that can be used by others to do something meaningful for them. (Not to knock the value of saying <code>hello, world</code>… but we can do so much more!)</p>
+<p>Now, create a file called <code>temp.c</code> (remember how?), ensuring that it is inside of a subdirectory called <code>temp</code> inside of your <code>chapter1</code> directory, and then double-click on that file in the file tree to the left. You should now have an open window in your text editor with the tab name <code>temp.c</code>, and you&#8217;re ready to write your first utility program&#8212;&#8203;a program that can be used by others to do something meaningful for them. (Not to knock the value of saying <code>hello, world</code>… but we can do so much more!)</p>
 </div>
 <div class="paragraph">
 <p>Write a program that converts a temperature in Celsius to Fahrenheit, as per the sample output below, wherein underlined text represents some user&#8217;s input<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="bash">~/chapter1/fahrenheit/ $ <span class="underline">./fahrenheit</span>
+<pre class="pygments highlight"><code data-lang="bash">week1 $ <span class="underline">./temp</span>
 C: <span class="underline">100</span>
 F: 212.0</code></pre>
 </div>
