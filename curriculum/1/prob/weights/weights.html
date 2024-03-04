@@ -82,9 +82,22 @@
 <div class="sect1">
     <h2 id="specification"><a class="link" href="#specification">Specification</a></h2>
     <div class="sectionbody">
-   
     <div class="paragraph">
-    <p>Let&#8217;s confirm that <code>hello.c</code> is indeed where it should be. Type</p>
+    <p>We'll write a program to <em>prompt the user for an amount to lift</em>, then use the available plates and weighted bars to create a balanced bench press bar to lift.  The weights are as follows:
+		Bars:<ul>
+			<li>35lb bar</li>
+			<li>45 lb bar</li>
+		</ul>
+		Plates:<ol>
+			<li>2.5lb</li>
+			<li>5lb</li>
+			<li>10lb</li>
+			<li>25lb</li>
+			<li>35lb</li>
+			<li>45lb</li>
+		</ol>
+	</p>
+		<p></p>Let&#8217;s confirm that <code>weights.c</code> is indeed where it should be. Type</p>
     </div>
     <div class="listingblock">
     <div class="content">
@@ -92,18 +105,26 @@
     </div>
     </div>
     <div class="paragraph">
-    <p>followed by Enter, and you should see <code>hello.c</code>? If not, no worries; you probably just missed a small step. Best to restart these past several steps or ask for help!</p>
+    <p>followed by Enter, and you should see <code>weights.c</code>? If not, no worries; you probably just missed a small step. Best to restart these past several steps or ask for help!</p>
     </div>
     <div class="paragraph">
-    <p>Assuming you indeed see <code>hello.c</code>, let&#8217;s try to compile! Cross your fingers and then type</p>
-    </div>
-    <div class="listingblock">
-    <div class="content">
-    <pre class="pygments highlight"><code data-lang="text"><span></span>make hello</code></pre>
-    </div>
+    <p>Assuming you indeed see <code>weights.c</code>, let&#8217;s start coding</p>
     </div>
     <div class="paragraph">
-    <p>at the prompt, followed by Enter. (Well, maybe don&#8217;t cross your fingers whilst typing.) To be clear, type only <code>hello</code> here, not <code>hello.c</code>. If all that you see is another, identical prompt, that means it worked! Your source code has been translated to object code (0s and 1s) that you can now execute. Type</p>
+    <p>We'll start with our usual: <br>
+		<code>
+			#include &lt; stdio.h &gt; //we use stdio for basics. like printing<br>
+			#include &lt; CS50.h &gt; //we use CS50 for things like get_string<br>
+<br>
+			int main (void)<br> 
+				{<br>
+				printf("Welcome to the weight room!");<br>
+				//ask user how much they'll be lifting and save as an integer <br />
+				}</br>
+			
+		</code>. 
+		If all that you see is another, identical prompt, that means it worked! 
+		Your source code has been translated to object code (0s and 1s) that you can now execute. Type</p>
     </div>
     <div class="listingblock">
     <div class="content">
